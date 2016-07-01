@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1 Edit album
+
+  form(method="POST" action="/albums/"+album._id+"?_method=PUT")
+    input(name="albumName", class='albumName', placeholder='Insert an Album Name' value=album.albumName)
+    br
+    input(name="artist", class='artist', placeholder='Insert an Artist Name' value=album.artist)
+    br
+    select(class="genre" name='genre') Select Genre
+      option(value="Metal" selected=album.genre == 'Metal') Metal
+      option(value="Jazz" selected=album.genre == 'Jazz') Jazz
+      option(value="Rock" selected=album.genre == 'Rock') Rock
+      option(value="HipHop" selected=album.genre == 'HipHop') HipHop
+    br
+    span(class="rating") Stars
+    br
+    label 1
+    input(class='radioButtons' name='rating' type="radio" value='1' checked=album.rating == '1')
+    input(class='radioButtons' name='rating' type="radio" value='2' checked=album.rating == '2')
+    input(class='radioButtons' name='rating' type="radio" value='3' checked=album.rating == '3')
+    input(class='radioButtons' name='rating' type="radio" value='4' checked=album.rating == '4')
+    input(class='radioButtons' name='rating' type="radio" value='5' checked=album.rating == '5')
+    label 5
+    br
+    input(name='isExplicit' class="explicit" type="checkBox" checked=album.isExplicit == 'on')
+    label= 'Contains Explicit Lyrics'
+    br
+    input(class="submitButton" type="submit" value="Submit")
+    a(href="/albums/"+album._id)
+      p= '   Cancel'

@@ -1,0 +1,17 @@
+doctype HTML
+html
+  head
+    title Car Collection
+  body
+    h1 Car Collection
+    block content
+      p Add a car to your Collection
+      form(name="addCar", action='/cars', method="post")
+        div
+          input(type="text", name="make", placeholder="enter car make")
+        p
+        div
+          input(type="text", name="model", placeholder="enter car model")
+        p
+        div
+          input(type="submit", value="Add car to your collection" color="blue")

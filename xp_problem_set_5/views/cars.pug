@@ -1,0 +1,9 @@
+doctype HTML
+html
+  h1 Cars in Collection
+  body
+  ul
+    for car in cars
+      li= "Make: " + car.make + ", Model: " + car.model
+      form(name="editCar", action='/cars/'+ car.id, method="get")
+          input(type="submit", value="edit car")

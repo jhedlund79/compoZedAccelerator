@@ -1,0 +1,46 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+  display: inline-block;
+  text-align: center;
+  margin: 30px;
+  /*min-width: 70px;*/
+}
+
+.radioButtons {
+  display: inline-block;
+  width: 20px;
+}
+.starz {
+  background: url('https://sc.mogicons.com/share/star-smiley-234.jpg') center center no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+/*
+@keyframes technicolor {
+  0% {background-color: brown;}
+  15% {background-color: blue;}
+  30% {background-color: orange;}
+  45% {background-color: purple;}
+  60% {background-color: yellow;}
+  75% {background-color: green;}
+  90% {background-color: red;}
+  100% {background-color: brown;}
+}*/
+
+px
+vh
+vw
+%
+em
+rem

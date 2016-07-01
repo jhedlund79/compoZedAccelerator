@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  padding-top: 4em;
+}
+#signIn {
+  float: right
+}
+
+#signUp {
+  float: right
+}
+
+#split {
+  padding-left: 1em;
+  padding-right: 1em;
+  float:right
+}

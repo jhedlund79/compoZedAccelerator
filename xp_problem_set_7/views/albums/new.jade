@@ -1,0 +1,41 @@
+extends ../layout.jade
+
+block content
+
+  h1 Create an album
+
+  form(name="new-album" method="POST" action="/albums")
+    div
+      span.label Artist
+      p
+      input(type="text" name="artist" placeholder="artist")
+      p
+    div
+      span.label Album
+      p
+      input(type="text" name="albumName" placeholder="album")
+      p
+    select(name="genreName")
+        option(value='Jazz')  Jazz
+        option(value='Folk')  Folk
+        option(value='Rock')  Rock
+
+    div
+      p Stars
+      p
+        | 1
+        form
+          input(type="radio", name="stars_filter", value="1")
+          input(type="radio", name="stars_filter", value="2")
+          input(type="radio", name="stars_filter", value="3")
+          input(type="radio", name="stars_filter", value="4")
+          input(type="radio", name="stars_filter", value="5")
+          | 5
+      p
+        form
+          input(type='checkbox' name='agreement')
+          | Contains Explicit Lyrics
+      p
+      input(type="submit" value="Create Album")
+      a(href="/albums")   cancel
+      a(href="/albums")   Home

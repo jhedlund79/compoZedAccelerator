@@ -1,0 +1,24 @@
+{
+  "name": "problem_set_3",
+  "version": "1.0.0",
+  "description": "Node packages for Problem Set 3",
+  "main": "jade_example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/xp_problem_set_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/xp_problem_set_3/issues"
+  },
+  "homepage": "https://github.com/gSchool/xp_problem_set_3#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "monk": "^1.0.1",
+    "pug": "^2.0.0-beta3"
+  }
+}

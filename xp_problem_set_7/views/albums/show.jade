@@ -1,0 +1,12 @@
+extends ../layout.jade
+
+block content
+
+  h1 Showing Album: #{album.albumName}
+  p Genre: #{album.genreName}
+  p Artist: #{album.artist}
+  p
+    a(href="albums/#{album._id}/edit") Edit
+  form(name="DeleteAlbum" method="POST" action="/#{album._id}?_method=DELETE")
+    input(type="submit" value="Delete")
+  a(href="/albums")   Home

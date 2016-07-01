@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 Create album
+
+  form(method="POST" action="/albums")
+    input(name="albumName", class='albumName', placeholder='Insert an Album Name')
+    br
+    input(name="artist", class='artist', placeholder='Insert an Artist Name')
+    br
+    select(class="genre" name='genre') Select Genre
+      option(value="Rock") Rock
+      option(value="Metal") Metal
+      option(value="Jazz") Jazz
+      option(value="HipHop") HipHop
+    br
+    span(class="rating") Rate from 1 to 5
+      br
+      input(type="radio" value='1' name='rating')
+      input(type="radio" value='2' name='rating')
+      input(type="radio" value='3' name='rating')
+      input(type="radio" value='4' name='rating')
+      input(type="radio" value='5' name='rating')
+    br
+    label
+      input(class="explicit" type="checkBox" name='explicit' value="Contains Explicit Lyrics")
+      = "Contains Explicit Lyrics"
+    br
+    input(class="submitButton" type="submit" value="Submit")

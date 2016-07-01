@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Asynchronous Challenge</title>
+  </head>
+  <body>
+    <h1>And the total likes are...</h1>
+    <div id="total-likes">
+      loading...
+    </div>
+
+    <script type="text/javascript">
+      var totalLikes = 0;
+      var count = 1;
+      var usersRequest = new XMLHttpRequest;
+      usersRequest.open('GET', '/users');
+      usersRequest.responseType = 'json';
+      usersRequest.addEventListener('load', function () {
+        processResponse(usersRequest.response);
+      });
+      usersRequest.send();
+
+      function getLikes(id){
+        var likesRequest = new XMLHttpRequest;
+        likesRequest.open('GET', '/users/' + id);
+        likesRequest.responseType = 'json';
+        likesRequest.addEventListener('load', function () {
+          totalLikes += likesRequest.response.likes;
+          if(count === usersRequest.response.length){
+            displayResult();
+          }
+          count ++;
+        });
+        likesRequest.send();
+      }
+
+      function processResponse(res){
+          for(var i = 0; i < res.length; i++){
+            getLikes(res[i].id);
+          }
+      }
+
+      function displayResult(){
+        document.getElementById('total-likes').innerHTML = totalLikes;
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= Persons
+  p Welcome to Persons
+
+  a(href="/new") Create new person
+
+  table(border="1" class="table table-striped")
+      thead
+        tr
+          td First Name
+          td Last Name
+          td Age
+      tbody
+        for person in persons
+          tr
+            td= person.firstName
+            td= person.lastName
+            td= person.age

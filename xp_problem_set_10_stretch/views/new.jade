@@ -1,0 +1,13 @@
+extend layout
+
+block content
+  h1 Create person
+  label(id="errorLabel" innerHTML="#{error}")
+  form(method="POST" action="/")
+    input(name="firstName" placeholder="Enter first name")
+    br
+    input(name="lastName" placeholder="Enter last name")
+    br
+    input(name="age" type="number" placeholder="Enter age")
+    br
+    input(class="submitButton" type="submit" value="Submit")

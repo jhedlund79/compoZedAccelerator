@@ -1,0 +1,59 @@
+extends ../layout.jade
+
+block content
+
+  h1 Edit an album
+
+  form(name="new-album" method="POST" action="/#{album._id}?_method=PUT")
+    div
+      span.label Artist
+      p
+      input(type="text" name="artist" value="#{album.artist}")
+      p
+    div
+      span.label Album
+      p
+      input(type="text" name="albumName" value="#{album.albumName}")
+      p
+    select(name="genreName")
+        option(value='Jazz' selected=(album.genreName == 'Jazz'))  Jazz
+        option(value='Folk' selected=(album.genreName == 'Folk'))  Folk
+        option(value='Rock' selected=(album.genreName == 'Rock'))  Rock
+
+    div
+      p Stars
+      p
+        | 1
+        form
+          if album.stars_filter == '1'
+            input(type="radio", name="stars_filter", value="1" checked)
+          else
+            input(type="radio", name="stars_filter", value="1")
+          if album.stars_filter == '2'
+            input(type="radio", name="stars_filter", value="2" checked)
+          else
+            input(type="radio", name="stars_filter", value="2")
+          if album.stars_filter == '3'
+            input(type="radio", name="stars_filter", value="3" checked)
+          else
+            input(type="radio", name="stars_filter", value="3")
+          if album.stars_filter == '4'
+            input(type="radio", name="stars_filter", value="4" checked)
+          else
+            input(type="radio", name="stars_filter", value="4")
+          if album.stars_filter == '5'
+            input(type="radio", name="stars_filter", value="5" checked)
+          else
+            input(type="radio", name="stars_filter", value="5")
+          | 5
+      p
+        form
+          if album.agreement = 'on'
+            input(type='checkbox' name='agreement' checked="true")
+          else
+            input(type='checkbox' name='agreement')
+          | Contains Explicit Lyrics
+      p
+      input(type="submit" value="Update Album")
+      a(href="/#{album._id}")   cancel
+      a(href="/albums")   Home

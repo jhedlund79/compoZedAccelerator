@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= 'Showing Album: ' + album.albumName
+  - var n = 0
+  - var len = album.rating
+  while n < len
+    div(class='starz' placeholder=n++)
+  a(href='/albums/'+album._id+'/edit')
+    p Edit
+  form(method='POST' action='/albums/'+album._id+'?_method=DELETE')
+    input(type='submit' value='DESTROY ALL THE THINGS!!')

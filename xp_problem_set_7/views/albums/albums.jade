@@ -1,0 +1,20 @@
+extends ../layout.jade
+
+block content
+  h1 Albums
+  p
+    a(href="albums/new") New Album
+  p
+    table(border="1" class="table table-striped")
+      thead
+      tr
+        td Genre Name
+        td Artist Name
+        td Album Name
+      tbody
+      for album in albums
+        tr
+          td= album.genreName
+          td= album.artist
+          td
+            a(href="/#{album._id}") #{album.albumName}

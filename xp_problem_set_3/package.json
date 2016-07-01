@@ -1,0 +1,23 @@
+{
+  "name": "xp_problem_set_3",
+  "version": "1.0.0",
+  "description": "## Approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhedlund79/xp_problem_set_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhedlund79/xp_problem_set_3/issues"
+  },
+  "homepage": "https://github.com/jhedlund79/xp_problem_set_3#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
