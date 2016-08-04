@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Spring Boot CLI + Javascript</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>List of Vistors!</h1>
+<table>
+    <thead>
+    <tr>
+        <td>Number</td>
+        <td>Visitor Name</td>
+        <td>Date Visited</td>
+        <td>Url Visited</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="visitor,rowStat: ${visitors}">
+        <td th:text="${rowStat.count}"></td>
+        <td th:text="${visitor.getName()}"></td>
+        <td th:text="${visitor.getDate()}"></td>
+        <td th:text="${visitor.getUrl()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
